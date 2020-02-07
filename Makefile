@@ -2,9 +2,9 @@ MF=     Makefile
  
 CC=     g++
  
-CFLAGS= -g -fopenmp -D_USE_OMP -msse4.2 -O3 -fomit-frame-pointer -funroll-loops  
+CFLAGS= -g -D_USE_OMP -msse4.2 -O3 -fomit-frame-pointer -funroll-loops  
  
-LFLAGS= -std=c++11 -I ./ -I ./libsdsl/include/ -L ./libsdsl/lib/ -lsdsl -ldivsufsort -ldivsufsort64 -Wl,-rpath=$(PWD)/libsdsl/lib
+LFLAGS= -std=c++11 -I ./ -I ./libsdsl/include/ -L ./libsdsl/lib/ -lsdsl -ldivsufsort -ldivsufsort64 -Wl,-rpath,$(PWD)/libsdsl/lib
  
 EXE=    mars
  
